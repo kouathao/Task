@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task Tracker</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body onload="fetchIssues()">
+	<!-- Start container -->
+	<div class="container">
+		<h1 class="text-center">Task Tracker</h1>
+		<div class="jumbotron">
+			<h1>Add New Task</h1>
+
+			<!-- Start of Form -->
+			<form id="issueInputForm">
+				<div class="form-group">
+					<label for="issueSubjInput">Subject</label>
+					<input type="text" class="form-control" id="issueSubjInput" placeholder="Enter subject details" required="required">
+				</div>			
+				<div class="form-group">
+					<label for="issueDescInput">Description</label>
+					<textarea id="issueDescInput" class="form-control" placeholder="Enter task details" rows="4" required="required"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="issueSeverityInput">Severity</label>
+					<select id="issueSeverityInput" class="form-control">
+						<option value="Low">Low</option>
+						<option value="Medium">Medium</option>
+						<option value="High">High</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="issueAssignedToInput">Assigned To</label>
+					<select id="issueAssignedToInput" class="form-control">
+						<option value="Koua Thao">Koua Thao</option>
+						<option value="Jason Halverson">Jason Halverson</option>
+						<option value="Daniel Clark">Daniel Clark</option>
+						<option value="Brandon Prairie">Brandon Prairie</option>
+						<option value="Andrew Rogers">Andrew Rogers</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="issueDateInput">Due Date</label>
+					<input type="date" class="form-control" id="issueDateInput" required="required">
+				</div>
+				<button type="reset" class="btn btn-warning btn-lg" style="float: right;">Clear</button>
+				<button type="submit" class="btn btn-primary btn-lg">Add</button>
+			</form>
+			<!-- End of Form -->
+		</div>
+		<!-- Javasscript -->
+		<div class="col-lg-12">
+			<div id="issuesList">
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div class="footer">
+			<p>Version 1.00</p>
+		</div>
+	</div>
+	<!--SCRIPT STARTS HERE -->
+	<script src="http://chancejs.com/chance.min.js"></script>
+	<script
+	  src="http://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+	<!--SCRIPT END HERE -->
+</body>
+</html>
